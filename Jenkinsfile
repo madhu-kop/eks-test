@@ -6,7 +6,9 @@ pipeline {
     }
 
   }
-properties([parameters([string(defaultValue: '1.0.0', description: 'Please provide the version number', name: 'version', trim: false)])])
+	paramters {
+string(defaultValue: '1.0.0', description: 'Please provide the version number', name: 'version', trim: false)
+	}
    environment {
     image = "madhu1718/test-repo"
     version = "${params.version}"
