@@ -54,8 +54,8 @@ parameters {
 	      cd springboot-helm-chart/demoweb
 	      export image_fullname="$image:$version"
 	      sed -i 's/tag/$version/' deployment.yaml
-	      kubectl create -f deployment.yaml
-	      kubectl create -f service.yaml
+	      kubectl apply -f deployment.yaml
+	      kubectl apply -f service.yaml
 	      
 	    
 	           """
