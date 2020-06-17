@@ -35,6 +35,7 @@ parameters {
 		   
 	stage('Deploy into K8S') {
        steps {
+	       script {
              sh """
 	     echo " Update the kubeconfig"
 	     aws eks --region $region update-kubeconfig --name $cluster_name
@@ -43,6 +44,7 @@ parameters {
 	     cd springboot-helm-chart/demoweb
 	     sed -i 's/imagefullname/$imagefullname/' deployment.yaml
 	           """
+	       }
         }
     }
 	
