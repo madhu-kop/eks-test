@@ -40,7 +40,7 @@ parameters {
 	     echo " Update the kubeconfig"
 	     aws eks --region $region update-kubeconfig --name $cluster_name
 	     echo "Changing image name and version in deployment yaml file"
-	     export imagefullname=$image:$version
+	    
 	     cd springboot-helm-chart/demoweb
 	     sed -i 's/imagefullname/$imagefullname/' deployment.yaml
 	           """
