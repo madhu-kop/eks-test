@@ -1,2 +1,0 @@
-# eks-test
-eks-test
