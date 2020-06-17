@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: eks-test
-          image: imagefullname
+          image: madhu1718/test-repo:tag
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
