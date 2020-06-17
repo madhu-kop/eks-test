@@ -15,7 +15,8 @@ parameters {
 
    }
 	
-	 stage('build') {
+  stages {
+	   stage('Input approval') {
         steps {
           
             script {
@@ -25,7 +26,6 @@ parameters {
             }
         }
     }
-  stages {
     stage('Compile and package') {
       steps {
         sh "cd springboot-helm-chart/demoweb && mvn package"
